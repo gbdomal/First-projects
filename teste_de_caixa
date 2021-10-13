@@ -1,0 +1,35 @@
+using System;
+using System.Globalization;
+namespace teste_de_caixa
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string produto1 = "computador";
+            string produto2 = "Mesa de Escritorio";
+
+            byte idade = 30;
+            int codigo = 5290;
+            char genero = 'M';
+            Object Cliente = "Maria";
+
+            double preco1 = 2100.0;
+            double preco2 = 650.50;
+            double medida = 53.234567;
+            double total = (preco1 + preco2);
+            double ValorDeEntrada = 3000;
+            double Troco = (ValorDeEntrada - total);
+
+            Console.WriteLine($"{produto1}= ${preco1}");
+            Console.WriteLine($"{produto2}= ${preco2}");
+            Console.WriteLine($"Registro: {idade} anos de idade, codigo {codigo}, genero {genero}");
+            Console.WriteLine($"{medida:F8}");
+            Console.WriteLine($"{medida:F3}");
+            Console.WriteLine(medida.ToString("F3", CultureInfo.InvariantCulture));
+            Console.WriteLine("valor total:$" + total.ToString ("F3"));
+            Console.WriteLine($"Troco=" + Troco.ToString("C2", new CultureInfo ("en-US")));
+
+        }
+    }
+}
